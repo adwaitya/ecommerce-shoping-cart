@@ -61,7 +61,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>ADI</Logo>
+          <Logo>ADIKART</Logo>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>
