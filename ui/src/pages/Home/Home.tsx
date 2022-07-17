@@ -1,10 +1,13 @@
-import Navbar from "../../components/Navbar/Navbar"
-
+import Announcement from "../../components/Announcement/Announcement";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
   return (
-    <div><Navbar/></div>
-  )
-}
+    <div>
+      <Announcement/>
+      <Navbar />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
