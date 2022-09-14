@@ -1,6 +1,6 @@
 import './index.scss';
-import Home from './pages/Home/Home';
-import ProductList from './pages/Home/ProductList';
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
 
 const App = () => {
   return (
