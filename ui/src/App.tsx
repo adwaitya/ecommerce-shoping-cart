@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 import './index.scss';
 import Cart from './pages/Cart';
@@ -14,6 +15,7 @@ import Register from './pages/Register';
 
 const App = () => {
 
+  const user = true;
   render(
     <BrowserRouter>
       <Routes>
@@ -25,9 +27,11 @@ const App = () => {
         </Route>
         <Route path="/cart" element={<Cart />}>
         </Route>
-        <Route path="/login" element={<Login />}>
+        <Route path="/login" element={user ? <Navigate to="/" /> : <Login/>}>
+          
         </Route>
-        <Route path="/register" element={<Register />}>
+        <Route path="/register" element={user ? <Navigate to="/" /> : <Register/>}>
+          
         </Route>
       </Routes>
     </BrowserRouter>,
