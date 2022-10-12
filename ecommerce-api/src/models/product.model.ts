@@ -2,10 +2,10 @@ import mongoose, { Document, Schema } from "mongoose";
 
 /**
  * @export
- * @interface IProductModel
+ * @interface IProduct
  * @extends {Document}
  */
- export interface IProductModel extends Document {
+ export interface IProduct extends Document {
     _id: string;
     title: string;
     desc: string;
@@ -61,4 +61,4 @@ import mongoose, { Document, Schema } from "mongoose";
   );
 
 
-  export default mongoose.model<IProductModel>('ProductModel', producuctSchema);
+  export default mongoose.model<IProduct>('ProductModel', producuctSchema);

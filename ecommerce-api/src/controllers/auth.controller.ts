@@ -47,7 +47,7 @@ class AuthController {
                     message: 'Password is not correct', errorHolder: new Error('Password is not correct'), httpCode: 401
                 });
             }
-            const tokenKey = await jwt.sign({ id: user._id }, config.secret, {
+            const tokenKey = await jwt.sign({ id: user._id, isAdmin: user.isAdmin, }, config.secret, {
                 expiresIn: 86400, // expires in 24 hours
             });
             data = { email: user.email, name: user.name, token: tokenKey };
