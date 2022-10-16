@@ -2,7 +2,9 @@ import express from "express";
 import { IServer } from "../interfaces/ServerInterface";
 import AuthRouter from "./auth.route";
 import UserRouter from "./user.route";
-import ProductRouter from "./produc.route";
+import ProductRouter from "./product.route";
+import CartRouter from "./cart.route";
+import OrderRouter from "./order.route";
 
 class Routes {
     /**
@@ -18,6 +20,10 @@ class Routes {
         server.app.use('/v1/api/users', UserRouter.router);
         // products
         server.app.use('/v1/api/products', ProductRouter.router);
+        // carts
+        server.app.use('/v1/api/carts', CartRouter.router);
+        // orders
+        server.app.use('/v1/api/orders', OrderRouter.router);
         // index
         server.app.use('/', (req, res) => {
             res.send('node rest api');

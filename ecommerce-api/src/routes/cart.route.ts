@@ -4,14 +4,14 @@ import { IsUserAuthenticated, verifyTokenAndAdmin, verifyTokenAndAuthorization }
 
 /**
  * @export
- * @class ProductRouter
+ * @class CartRouter
  */
- class ProductRouter {
+ class CartRouter {
     public router: Router;
   
       /**
        * Creates an instance of AuthRouter.
-       * @memberof ProductRouter
+       * @memberof CartRouter
        */
     constructor() {
       this.router = Router();
@@ -19,7 +19,7 @@ import { IsUserAuthenticated, verifyTokenAndAdmin, verifyTokenAndAuthorization }
     }
   
       /**
-       * @memberof ProductRouter
+       * @memberof CartRouter
        */
     public routes(): void {
   
@@ -31,5 +31,5 @@ import { IsUserAuthenticated, verifyTokenAndAdmin, verifyTokenAndAuthorization }
     }
   }
   
-  export default new ProductRouter();
+  export default new CartRouter();
   
